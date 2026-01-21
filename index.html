@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -19,19 +19,26 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">AG</a>
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#awards">Awards</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="resume.pdf" class="btn-primary" target="_blank">Download Resume</a></li>
-            </ul>
+            <a href="#" class="logo">AG.</a>
+
+            <div style="display: flex; align-items: center;">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#awards">Awards</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="resume.pdf" class="btn-primary" target="_blank"><i class="fas fa-download"></i>
+                            Resume</a></li>
+                </ul>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -41,13 +48,15 @@
             <div class="hero-content">
                 <p class="greeting">Hello, I'm</p>
                 <h1 class="name">Ajith Kumar Gani</h1>
-                <h2 class="title">Performance Engineer</h2>
+                <div class="title-wrapper">
+                    I am a <span id="typewriter" class="typewriter-text"></span>
+                </div>
                 <p class="bio">
                     Optimizing scalable, mission-critical systems across cloud-native, web, and mobile platforms.
                     Specializing in observability, continuous performance testing, and DevSecOps integration.
                 </p>
                 <div class="hero-actions">
-                    <a href="#experience" class="btn-primary">View Experience</a>
+                    <a href="#experience" class="btn-primary">View Experience <i class="fas fa-arrow-right"></i></a>
                     <a href="#contact" class="btn-outline">Contact Me</a>
                 </div>
             </div>
@@ -56,10 +65,10 @@
 
     <main>
         <!-- About / Summary Section -->
-        <section id="about" class="section">
+        <section id="about" class="section reveal">
             <div class="container">
                 <h2 class="section-title">Professional Summary</h2>
-                <div class="about-content">
+                <div class="about-content glass" style="padding: 2rem; border-radius: 12px;">
                     <p>
                         Performance Engineer with 7+ years of experience in optimizing scalable, mission-critical
                         systems across cloud-native, web, and mobile platforms.
@@ -78,12 +87,12 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="section bg-light">
+        <section id="skills" class="section bg-light reveal">
             <div class="container">
                 <h2 class="section-title">Technical Skills</h2>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3>Testing & Automation</h3>
+                        <h3><i class="fas fa-laptop-code"></i> Testing & Automation</h3>
                         <div class="skill-tags">
                             <span>JMeter</span>
                             <span>LoadRunner</span>
@@ -95,7 +104,7 @@
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3>DevOps & Cloud</h3>
+                        <h3><i class="fas fa-server"></i> DevOps & Cloud</h3>
                         <div class="skill-tags">
                             <span>Jenkins</span>
                             <span>Git</span>
@@ -108,7 +117,7 @@
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3>Monitoring & Observability</h3>
+                        <h3><i class="fas fa-chart-line"></i> Monitoring</h3>
                         <div class="skill-tags">
                             <span>Grafana</span>
                             <span>Prometheus</span>
@@ -119,7 +128,7 @@
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3>Languages & DB</h3>
+                        <h3><i class="fas fa-code"></i> Languages & DB</h3>
                         <div class="skill-tags">
                             <span>Java</span>
                             <span>Python</span>
@@ -136,7 +145,7 @@
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="section">
+        <section id="experience" class="section reveal">
             <div class="container">
                 <h2 class="section-title">Work Experience</h2>
                 <div class="timeline">
@@ -145,7 +154,7 @@
                         <div class="timeline-date">May 2023 – Present</div>
                         <div class="timeline-content">
                             <h3>Performance Engineer</h3>
-                            <h4>IBM Software Labs, Kochi, India</h4>
+                            <h4><i class="fas fa-briefcase"></i> IBM Software Labs, Kochi, India</h4>
                             <ul>
                                 <li>Optimized IBM WebSphere Liberty performance, increasing payment service throughput
                                     by 40% through tuning and runtime configuration enhancements.</li>
@@ -167,7 +176,7 @@
                         <div class="timeline-date">Jan 2021 – May 2023</div>
                         <div class="timeline-content">
                             <h3>Senior Performance Test Engineer</h3>
-                            <h4>Vodafone Qatar (via Maveric Systems), Doha, Qatar</h4>
+                            <h4><i class="fas fa-briefcase"></i> Vodafone Qatar (via Maveric), Doha</h4>
                             <ul>
                                 <li>Analyzed HLD documents to prepare test strategies, increasing project efficiency by
                                     25%.</li>
@@ -179,8 +188,6 @@
                                     simulator for production-quality validation.</li>
                                 <li>Monitored JVM heap memory and garbage collection on WebLogic with VisualVM and APM
                                     tools.</li>
-                                <li>Deployed and maintained monitoring stack (Telegraf, InfluxDB, Grafana), boosting
-                                    issue detection by 50%.</li>
                             </ul>
                         </div>
                     </div>
