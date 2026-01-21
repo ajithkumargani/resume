@@ -33,8 +33,8 @@ Hosting this site for free on GitHub is easy:
 2.  **Enable Pages**:
     -   Go to your repository **Settings**.
     -   Click **Pages** in the left sidebar.
-    -   Under **Source**, select `main` branch and `/ (root)` folder.
-    -   Click **Save**.
+    -   Under **Build and deployment**, select **GitHub Actions** as the source.
+    -   The workflow will automatically pick up the file we created.
     -   Your site will be live at `https://yourusername.github.io/repo-name/`.
 
 ## 🎨 Customization
